@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { studios } from "../variables/studios";
 
@@ -13,7 +14,7 @@ export default function Rooms() {
             key={studio.name}
             className="background_dark_green p-8 rounded-lg shadow-md w-full"
           >
-            <a href={studio.link}>
+            <Link href={`/rooms/${encodeURIComponent(studio.id)}`}>
               <Image
                 src={studio.image}
                 alt={studio.name}
@@ -21,7 +22,7 @@ export default function Rooms() {
                 height={studio.height}
                 className="rounded-lg mb-4"
               />
-            </a>
+            </Link>
             <div className="flex flex-col justify-center items-start gap-4 max-w-xl mx-auto">
               <h2 className="text-xl text-white font-bold self-center">
                 {studio.name}

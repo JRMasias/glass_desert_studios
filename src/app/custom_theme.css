@@ -1,0 +1,150 @@
+:root {
+  --primary-color: #ff3b96; /* Pink */
+  --secondary-color: #9783fb; /* Purple */
+  --accent-color: #65a5fc; /* Blue */
+  --highlight-color: #0cf2c8; /* Green */
+  --background-color: #030226; /* Dark Blue/Purple */
+  --dark-primary: #300418; /* Darker Pink */
+  --dark-secondary: #1f1a3d; /* Darker Purple */
+  --dark-accent: #0a1c3d; /* Darker Blue */
+  --dark-highlight: #00201a; /* Darker Green */
+}
+
+/*
+  * Custom Background Colors
+*/
+.background_dark {
+  background-color: var(--background-color);
+}
+
+.background_pink {
+  background-color: var(--primary-color);
+}
+
+.background_purple {
+  background-color: var(--secondary-color);
+}
+
+.background_blue {
+  background-color: var(--accent-color);
+}
+
+.background_green {
+  background-color: var(--highlight-color);
+}
+
+.background_dark_pink {
+  background-color: var(--dark-primary);
+}
+
+.background_dark_purple {
+  background-color: var(--dark-secondary);
+}
+
+.background_dark_blue {
+  background-color: var(--dark-accent);
+}
+
+.background_dark_green {
+  background-color: var(--dark-highlight);
+}
+
+/*
+  * Custom Text Colors
+*/
+dark_color {
+  color: var(--background-color);
+}
+
+.pink_color {
+  color: var(--primary-color) !important;
+}
+
+.purple_color {
+  color: var(--secondary-color);
+}
+
+.blue_color {
+  color: var(--accent-color);
+}
+
+.green_color {
+  color: var(--highlight-color);
+}
+
+.dark_pink_color {
+  color: var(--dark-primary);
+}
+
+.dark_purple_color {
+  color: var(--dark-secondary);
+}
+
+.dark_blue_color {
+  color: var(--dark-accent);
+}
+
+.dark_green_color {
+  color: var(--dark-highlight);
+}
+
+/* 
+  * Custom Border Colors
+*/
+.border_dark {
+  border-color: var(--background-color);
+}
+
+.border_pink {
+  border-color: var(--primary-color);
+}
+
+.border_purple {
+  border-color: var(--secondary-color);
+}
+
+.border_blue {
+  border-color: var(--accent-color);
+}
+
+.border_green {
+  border-color: var(--highlight-color);
+}
+
+.border_dark_pink {
+  border-color: var(--dark-primary);
+}
+
+.border_dark_purple {
+  border-color: var(--dark-secondary);
+}
+
+.border_dark_blue {
+  border-color: var(--dark-accent);
+}
+
+.border_dark_green {
+  border-color: var(--dark-highlight);
+}
+
+/*
+  * Ring Colors
+*/
+.ring_outline:focus-visible,
+*:focus-visible {
+  outline: 1px solid var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 3px rgb(255, 59, 150) !important;
+}
+
+/* Desktop Nav Colors */
+.desktop_navbar_link {
+  color: var(--accent-color);
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+
+.desktop_navbar_link:hover {
+  color: var(--highlight-color) !important;
+  opacity: 1 !important;
+}

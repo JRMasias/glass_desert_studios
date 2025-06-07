@@ -1,9 +1,9 @@
-import studio1 from "@/public/images/studio1.jpeg";
-import studio2 from "@/public/images/studio2.jpeg"; 
-import studio3 from "@/public/images/studio3.jpeg";
-import studio4 from "@/public/images/studio4.jpeg";
-import studio5 from "@/public/images/studio5.jpeg";
-import studio6 from "@/public/images/studio6.jpeg";
+import studio1 from "../../../public/images/studio1.jpeg";
+import studio2 from "../../../public/images/studio2.jpeg";
+import studio3 from "../../../public/images/studio3.jpeg";
+import studio4 from "../../../public/images/studio4.jpeg";
+import studio5 from "../../../public/images/studio5.jpeg";
+import studio6 from "../../../public/images/studio6.jpeg";
 
 export const studios = [
   {

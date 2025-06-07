@@ -34,7 +34,7 @@ export default function MobileNavbar(props) {
       </div>
       <SheetContent
         side="top"
-        className="md:flex md:flex-col md:justify-center md:items-center bg-neutral-900/85"
+        className="md:flex md:flex-col md:justify-center md:items-center bg-neutral-900"
       >
         <SheetTitle />
         <SheetDescription className="flex flex-col justify-center items-center pt-14 md:pt-0">

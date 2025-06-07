@@ -17,6 +17,10 @@
   background-color: var(--background-color);
 }
 
+.background_dark_opacity {
+  background-color: rgba(3, 2, 38, 0.9); /* Dark Blue/Purple with opacity */
+}
+
 .background_pink {
   background-color: var(--primary-color);
 }
@@ -86,6 +90,14 @@ dark_color {
 
 .dark_green_color {
   color: var(--dark-highlight);
+}
+
+.alternate_color {
+  color: var(--primary-color);
+}
+
+.alternate_color:nth-child(odd) {
+  color: var(--highlight-color);
 }
 
 /* 

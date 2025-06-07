@@ -8,6 +8,8 @@
   --dark-secondary: #1f1a3d; /* Darker Purple */
   --dark-accent: #0a1c3d; /* Darker Blue */
   --dark-highlight: #00201a; /* Darker Green */
+  --orange: #ff8c00; /* Orange */
+  --dark-orange: #b35a00; /* Darker Orange */
 }
 
 /*
@@ -53,6 +55,14 @@
   background-color: var(--dark-highlight);
 }
 
+.background_orange {
+  background-color: var(--orange);
+}
+
+.background_dark_orange {
+  background-color: var(--dark-orange);
+}
+
 /*
   * Custom Text Colors
 */
@@ -92,6 +102,14 @@ dark_color {
   color: var(--dark-highlight);
 }
 
+.orange_color {
+  color: var(--orange);
+}
+
+.dark_orange_color {
+  color: var(--dark-orange);
+}
+
 .alternate_color {
   color: var(--primary-color);
 }
@@ -103,6 +121,10 @@ dark_color {
 /* 
   * Custom Border Colors
 */
+* {
+  border-color: var(--primary-color);
+}
+
 .border_dark {
   border-color: var(--background-color);
 }
@@ -139,6 +161,36 @@ dark_color {
   border-color: var(--dark-highlight);
 }
 
+.border_orange {
+  border-color: var(--orange);
+}
+
+.border_dark_orange {
+  border-color: var(--dark-orange);
+}
+
+/* 
+  * Link Colors
+*/
+.link_blue {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.link_blue:hover {
+  color: var(--orange) !important;
+  text-decoration: underline;
+}
+.link_green {
+  color: var(--highlight-color);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.link_green:hover {
+  color: var(--orange) !important;
+  text-decoration: underline;
+}
+
 /*
   * Ring Colors
 */
@@ -159,4 +211,31 @@ dark_color {
 .desktop_navbar_link:hover {
   color: var(--highlight-color) !important;
   opacity: 1 !important;
+}
+
+/* 
+  * Animations 
+*/
+@keyframes spin {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.075);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.spin {
+  animation-name: spin;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-delay: 0.3s;
 }

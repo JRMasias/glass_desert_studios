@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import "./custom_theme.css";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 export const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 
@@ -17,7 +18,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${poppins.className} antialiased  background_dark`}>
         <Navbar organization="Glass Desert Studios" />
-        <main className="max-w-5xl mx-auto">{children}</main>
+        <main className="max-w-3xl mx-auto">
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );

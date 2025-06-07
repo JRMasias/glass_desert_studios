@@ -19,6 +19,8 @@ export const studios = [
       "Spacious layout for large groups",
       "Professional lighting setup",
     ],
+    price: 50,
+    link: "/images/studio1.jpeg", // Link to the image
   },
   {
     name: "Studio A",
@@ -33,6 +35,8 @@ export const studios = [
       "Soundproofing for clear recordings",
       "Comfortable seating",
     ],
+    price: 30,
+    link: "/images/studio2.jpeg", // Link to the image
   },
   {
     name: "Studio B",
@@ -47,6 +51,8 @@ export const studios = [
       "Relaxing lounge area",
       "High-speed internet access",
     ],
+    price: 40,
+    link: "/images/studio3.jpeg", // Link to the image
   },
   {
     name: "Studio C",
@@ -61,6 +67,8 @@ export const studios = [
       "Lighting equipment for video shoots",
       "Editing software and hardware",
     ],
+    price: 80,
+    link: "/images/studio4.jpeg", // Link to the image
   },
   {
     name: "Studio D",
@@ -75,6 +83,8 @@ export const studios = [
       "Soundproof environment for clear audio capture",
       "Flexible space for different recording setups",
     ],
+    price: 125,
+    link: "/images/studio5.jpeg", // Link to the image
   },
   {
     name: "Studio E",
@@ -89,5 +99,7 @@ export const studios = [
       "Soundproof environment for audio editing",
       "Comfortable workspace with ergonomic furniture",
     ],
+    price: 60,
+    link: "/images/studio6.jpeg", // Link to the image
   },
 ];

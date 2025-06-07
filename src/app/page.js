@@ -7,6 +7,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import ScaleOnView from "@/components/ui/image-scaler";
 
 export default function Home() {
   return (
@@ -40,12 +41,12 @@ export default function Home() {
                   key={engProd.name}
                   className="cursor-pointer alternate_color flex flex-col items-center justify-center"
                 >
-                  <Image
+                  {/* Spin the images when they come into view */}
+                  <ScaleOnView
                     src={engProd.image}
                     alt={engProd.name}
                     width={engProd.width}
                     height={engProd.height}
-                    className="w-24 h-24 rounded-full object-cover"
                   />
                   <h3 className="text-lg font-bold">{engProd.name}</h3>
                   <p className="text-sm">{engProd.role}</p>

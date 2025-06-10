@@ -10,6 +10,7 @@
   --dark-highlight: #00201a; /* Darker Green */
   --orange: #ff8c00; /* Orange */
   --dark-orange: #b35a00; /* Darker Orange */
+  --darker-purple: #100d1f;
 }
 
 /*
@@ -63,6 +64,10 @@
   background-color: var(--dark-orange);
 }
 
+.background_darker_purple {
+  background-color: var(--darker-purple);
+}
+
 /*
   * Custom Text Colors
 */
@@ -92,6 +97,10 @@ dark_color {
 
 .dark_purple_color {
   color: var(--dark-secondary);
+}
+
+.darker_purple_color {
+  color: var(--darker-purple);
 }
 
 .dark_blue_color {
@@ -191,6 +200,20 @@ dark_color {
   text-decoration: underline;
 }
 
+/* Button Styles */
+.form_button {
+  padding: 0.5rem 1rem;
+  color: var(--orange);
+  border: 1px solid var(--orange);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.form_button:hover {
+  background-color: var(--orange);
+  color: whitesmoke;
+}
+
 /*
   * Ring Colors
 */
@@ -238,4 +261,56 @@ dark_color {
   animation-duration: 0.8s;
   animation-timing-function: linear;
   animation-delay: 0.3s;
+}
+
+@keyframes sheen {
+  0% {
+    transform: translate(-100%, -100%) rotate(25deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100%, 100%) rotate(25deg);
+    opacity: 0;
+  }
+}
+.sheen-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.sheen-image {
+  display: block;
+}
+.sheen-effect {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  transform: rotate(0deg);
+  animation: sheen 5s ease-in-out infinite;
+}
+
+@keyframes sheen_scaler {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.025);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.sheen-scaler {
+  animation: sheen_scaler 5s ease-in-out infinite;
 }

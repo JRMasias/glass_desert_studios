@@ -4,13 +4,16 @@ import logo from "../../../public/images/glass_desert_studios_slab_logo_dark.jpg
 export default function Footer() {
   return (
     <footer className="flex flex-col items-center justify-center mt-10 pink_color gap-10 text-xl mb-2">
-      <Image
-        src={logo}
-        alt="Glass Desert Studios Logo"
-        width={2048}
-        height={2048}
-        className="w-full max-w-xs rounded-2xl"
-      />
+      <div className="sheen-wrapper sheen-scaler rounded-2xl">
+        <Image
+          src={logo}
+          alt="Glass Desert Studios Logo"
+          width={2048}
+          height={2048}
+          className="w-full max-w-xs rounded-2xl sheen-image"
+        />
+        <div className="sheen-effect" />
+      </div>
       <div className="flex flex-col justify-center items-center">
         <p>1234 Kings Meadow Rd.</p>
         <p>Austin, Tx 78745</p>
@@ -24,7 +27,7 @@ export default function Footer() {
           gda@glassdesertstudios.com
         </a>
       </div>
-      <p className="text-xs text-center">
+      <p className="text-[0.5rem] md:text-xs purple_color text-center">
         Designed & developed by J. R. Masias - 2025 - Glass Desert Studios
         &copy;
       </p>

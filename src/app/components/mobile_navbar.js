@@ -18,8 +18,8 @@ export default function MobileNavbar(props) {
   return (
     <Sheet>
       <div className="flex justify-between items-center p-4 md:pe-10 gap-10 max-w-3xl mx-auto">
-        <Link href="/" className="">
-          <p className="text-xl pink_color">{props.organization}</p>
+        <Link href="/">
+          <p className="text-lg sm:text-xl pink_color">{props.organization}</p>
         </Link>
         <SheetTrigger
           className="hover:cursor-pointer flex flex-col justify-between items-center h-7"
@@ -39,13 +39,15 @@ export default function MobileNavbar(props) {
         <SheetTitle />
         <SheetDescription className="flex flex-col justify-center items-center pt-14 md:pt-0">
           {/* Glass Desert Logo */}
-          <Image
-            src="/images/glass_desert_studios_slab_logo_dark.jpg"
-            alt="Glass Desert Studios Logo"
-            width={2048}
-            height={2048}
-            className="w-4/5 max-w-[512px]! md:p-4"
-          />
+          <Link href="/" className="flex justify-center items-center">
+            <Image
+              src="/images/glass_desert_studios_slab_logo_dark.jpg"
+              alt="Glass Desert Studios Logo"
+              width={2048}
+              height={2048}
+              className="w-4/5 max-w-[512px]! md:p-4"
+            />
+          </Link>
           {links.map((data) => {
             return (
               <SheetClose asChild key={data.title}>

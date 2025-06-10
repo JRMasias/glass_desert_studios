@@ -1,4 +1,5 @@
 "use client";
+import { Roboto_Serif } from "next/font/google";
 import Image from "next/image";
 import { studios } from "./variables/studios";
 import { engsProds } from "./variables/engs_prods";
@@ -8,10 +9,14 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import ScaleOnView from "@/components/ui/image-scaler";
+export const roboto_s = Roboto_Serif({
+  weight: ["400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center py-4">
+    <main className="flex flex-col items-center justify-center py-4 max-w-5xl w-full mx-auto">
       {/* Main Studio Image */}
       <Image
         className="rounded-lg w-full"
@@ -22,9 +27,13 @@ export default function Home() {
       />
 
       {/* About Section */}
-      <div className="flex flex-col items-center justify-center gap-4 background_dark_purple text-center border-10 md:border-16 border_blue rounded-md my-10 p-8">
-        <h1 className="text-3xl font-bold pink_color">Glass Desert Studios</h1>
-        <p className="text-lg max-w-2xl text-white background_dark_blue p-4">
+      <div className="flex flex-col items-center justify-center gap-4 text-center p-8">
+        <h1 className={`text-4xl md:text-7xl font-medium pink_color`}>
+          Glass Desert Studios
+        </h1>
+        <p
+          className={`text-lg max-w-2xl text-white background_dark_blue p-4 ${roboto_s.className}`}
+        >
           Glass Desert Studios is a creative space designed for artists,
           musicians, and content creators. Our studio is equipped with
           state-of-the-art facilities to help you bring your vision to life.
@@ -49,7 +58,9 @@ export default function Home() {
                     height={engProd.height}
                   />
                   <h3 className="text-lg font-bold">{engProd.name}</h3>
-                  <p className="text-sm">{engProd.role}</p>
+                  <p className={`text-sm ${roboto_s.className}`}>
+                    {engProd.role}
+                  </p>
                 </PopoverTrigger>
                 <PopoverContent className="background_dark_green border_pink">
                   <p className="pink_color">{engProd.name}</p>

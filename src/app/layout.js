@@ -1,10 +1,11 @@
-import { Poppins } from "next/font/google";
+import { Poppins, Cinzel } from "next/font/google";
 import "./globals.css";
 import "./custom_theme.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 
 export const poppins = Poppins({ weight: "400", subsets: ["latin"] });
+export const cinzel = Cinzel({ weight: "variable", subsets: ["latin"] });
 
 export const metadata = {
   title: "Glass Desert Studios",
@@ -16,12 +17,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} antialiased  background_dark`}>
+      <body
+        className={`${cinzel.className} antialiased background_dark tracking-wide leading-8`}
+      >
         <Navbar organization="Glass Desert Studios" />
-        <main className="max-w-3xl mx-auto">
-          {children}
-          <Footer />
-        </main>
+        {children}
+        <Footer />
       </body>
     </html>
   );
